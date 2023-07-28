@@ -1,0 +1,218 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}   
+html{
+    scroll-behavior: smooth;
+}
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(19,41,75,0.75),rgba(19,41,75,0.75)), url(images/background.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.logo{
+    width: 240px;
+    cursor: pointer;
+}
+nav{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+nav ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #E84A27;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+nav ul li:hover::after{
+    width: 100%;
+}
+.section{
+    max-width: 100vw;
+    position: flex;
+    justify-content: space-between;
+    background: #A5A8AA;
+
+}
+.content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+}
+.content h1{
+    font-size: 70px;
+    margin-top: 80px;
+}
+.content p{
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+button{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: 500;
+    border: 2px solid #E84A27;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    display: inline;
+}
+button span{
+    background: #E84A27;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.3s;
+}
+button:hover span{
+    width: 100%;
+}
+button:hover{
+    border: none;
+}
+.container{
+    padding: 20px 20px;
+}
+.container h2{
+    display:inline-flex;
+    font-size: 40px;
+    margin-bottom: 2px;
+}
+.container p{
+    margin-bottom: 30px;
+}
+.accordion{
+    height: 100vh;
+    width: 95vw;
+}
+.accordion .contentBox{
+    position: relative;
+    margin: 10px 10px;
+}
+.accordion .contentBox .label{
+    position: relative;
+    padding: 10px;
+    background-color: #E8E9EA;
+    height: 60px;
+    cursor: pointer;
+    box-shadow: 0 5px 11px 0 rgba(0,0,0,0.1), 0 4px 11px 0 rgba(0,0,0,0.08);
+    border-radius: 6px;
+}
+.accordion .contentBox .label::before{
+    content: "+";
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 1.5em;
+    font-weight: 600;
+}
+.accordion .contentBox .description{
+    position: relative;
+    background: #E8E9EA;
+    height: 0;
+    overflow: hidden;
+    overflow-y: auto;
+}
+.accordion .contentBox.active .description{
+    height: 300px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    box-shadow: 0 5px 11px 0 rgba(0,0,0,0.1), 0 4px 11px 0 rgba(0,0,0,0.08);
+}
+.accordion .contentBox.active .label{
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.accordion .contentBox.active .label::before{
+    content: "-";
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 1.5em;
+    font-weight: 600;
+}
+#titlep{
+    font-size: 20px;
+    width: 100%;
+    margin-bottom: 0;
+    padding-left: 20px;
+}
+.info-container{
+    position: relative;
+    width: 100%;
+    margin: auto auto;
+    padding-left: 7%;
+    background: #E8E9EA;
+}
+.info-container .box2{
+    text-align: center;
+    position: relative;
+    width: 40%;
+    height: 90%;
+    background: #fff;
+    float: left;
+    padding-top: 3%;
+    margin: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 0 5px 11px 0 rgba(0,0,0,0.1), 0 4px 11px 0 rgba(0,0,0,0.08);
+}
+.info-container p{
+    margin: 10px;
+    text-align: justify;
+}
+.info-container p span{
+    color: #E84A27;
+}
+hr{
+    color: #A5A8AA;
+}
+.description h2{
+    padding-top: 30px;
+    padding-left: 20px;
+}
+/*
+# for ID
+. for class
+*/
